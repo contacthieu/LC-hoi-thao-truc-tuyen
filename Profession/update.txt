@@ -1,0 +1,17 @@
+Profession v1.1.3
+- New Google Maps no api required
+- Fix some error that show on the browser console
+
+Profession v1.1.2
+- fixes for menu issue on Chrome & Safari browser
+
+Profession v1.1
+- Added new 10 homepages with 'particle effect'
+- CSS improvements
+
+Profession v1.0.2
+- fixes for menu issue on mobile
+- optimized for faster load
+
+Profession v1.0.1
+- new homepage added

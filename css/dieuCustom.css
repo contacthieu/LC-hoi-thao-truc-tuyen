@@ -1,0 +1,114 @@
+body {
+  background-color: #639; }
+
+.share-container {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: #e4e9e9;
+  top: 80%;
+  left: 97%;
+  transform: translate(-50%, -80%);
+  box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease, box-shadow 0.1s 0.3s ease;
+  z-index: 5; }
+
+@media only screen and (max-width: 414px) {
+  .share-container {
+    left: 91%; } }
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .share-container {
+    left: 94%; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .share-container {
+    left: 95%; } }
+.social-check-label {
+  z-index: 10;
+  position: absolute;
+  height: 30px;
+  width: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 100%;
+  transition: 0.3s ease; }
+  .social-check-label::before, .social-check-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 35%;
+    border-radius: 2px;
+    background-color: #03a9f4; }
+  .social-check-label::after {
+    transform: translate(-50%, -50%) rotate(90deg); }
+
+.social-button {
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.75);
+  transition: 0.3s ease, opacity 0.1s ease;
+  background-size: cover !important;
+  backface-visibility: hidden;
+  opacity: 0; }
+  .social-button.facebook {
+    top: 150px;
+    background: url("https://cdn4.iconfinder.com/data/icons/social-icon-4/842/facebook-256.png") no-repeat center; }
+  .social-button.youtube {
+    top: 225px;
+    background: url("/images/ui/youtube.png") no-repeat center; }
+  .social-button.tiktok {
+    top: 300px;
+    background: url("/images/ui/tiktok.png") no-repeat center; }
+
+.expander {
+  position: fixed;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  background-color: #e4e9e9;
+  top: 85%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+  transition: 0.3s ease; }
+
+#socialCheckbox {
+  display: none; }
+  #socialCheckbox:checked ~ .share-container {
+    background-color: transparent;
+    height: 250px;
+    box-shadow: none;
+    transition: 0.3s ease, box-shadow 0.1s ease; }
+    #socialCheckbox:checked ~ .share-container > .social-button {
+      opacity: 1;
+      cursor: pointer; }
+      #socialCheckbox:checked ~ .share-container > .social-button.facebook {
+        top: 50px;
+        transition: 0.3s ease, opacity 0.33s 0.455s ease, top 0.33s 0.405s cubic-bezier(0, 0, 0.5, 1.6); }
+      #socialCheckbox:checked ~ .share-container > .social-button.youtube {
+        top: 105px;
+        transition: 0.3s ease, opacity 0.33s 0.35s ease, top 0.33s 0.3s cubic-bezier(0, 0, 0.5, 1.6); }
+      #socialCheckbox:checked ~ .share-container > .social-button.tiktok {
+        top: 160px;
+        transition: 0.3s ease, opacity 0.33s 0.25s ease, top 0.33s 0.2s cubic-bezier(0, 0, 0.5, 1.6); }
+      #socialCheckbox:checked ~ .share-container > .social-button:hover {
+        transform: translate(-50%, -50%) scale(1);
+        transition: 0.3s cubic-bezier(0.3, 0.2, 0, 2.5); }
+    #socialCheckbox:checked ~ .share-container > .social-check-label {
+      transform: translateX(-50%) rotate(225deg); }
+  #socialCheckbox:checked ~ .expander {
+    height: 2500px;
+    width: 2500px; }
+
+@media screen and (max-width: 800px) {
+  #socialCheckbox:checked ~ .expander {
+    height: 1200px;
+    width: 1200px; } }
+
+/*# sourceMappingURL=dieuCustom.css.map */

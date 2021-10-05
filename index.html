@@ -704,8 +704,7 @@
                         <div class="social-icons big">
                             <a target="_blank" href="https://www.facebook.com/livechannel.vn"><i
                                     class="fa fa-facebook fa-lg"></i></a>
-                            <a target="_blank" href="https://www.youtube.com/c/livechannelvn"><i
-                                    class="fa fa-youtube"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/c/livechannelvn"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                             <!-- <a href="#"><i class="fa fa-skype fa-lg"></i></a> -->
                             <a target="_blank" href="https://livechannel.vn/"><img style="height: 50px; width: 50px;" src="/images/ui/tiktok-white.png" alt="ivechannel trang chu"></a>
                         </div>
@@ -752,13 +751,41 @@
 
         <input type="checkbox" id="socialCheckbox" />
         <div class="share-container">
-          <div class="social-button facebook"></div>
-          <div class="social-button youtube"></div>
-          <div class="social-button tiktok"></div>
+            <div class="social-button facebook"><a class="sub-btshare" href="https://www.facebook.com/livechannel.vn"></a></div>
+            <div class="social-button youtube"><a class="sub-btshare" href="https://www.youtube.com/c/livechannelvn"></a></div>
+            <div class="social-button tiktok"><a class="sub-btshare" href="https://vt.tiktok.com/ZSeRMnjow/"></a></div> 
           <label for="socialCheckbox" class="social-check-label"></label>
         </div>
 
     </div>
+
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "432053516998065");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
 
